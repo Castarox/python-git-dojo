@@ -4,25 +4,40 @@ class GittieHelper():
         """
         Initialize attributes with default value
         """
+<<<<<<< HEAD
         self.air_pollution_level = 10
         self.day_number = 10
 
 
 
+=======
+        self.temperature_degree = 0
+        self.humidity_value = 0
+>>>>>>> 94d15138a1c19a3905946663e5a1a886bd823269
 
     def set_temperature(self, temperature_degree):
         """
         Method sets temperature to attribute and validate input
-        :param temperature_degree:
+        :param temperature_degree: float
         """
-        pass
+        try:
+            float(temperature_degree)
+            self.temperature_degree = temperature_degree
+        except ValueError:
+            print('Wrong input')
+
+
 
     def set_humidity(self, humidity_value):
         """
         Method sets humidity level to attribute and validate input
         :param humidity_value:pass
         """
-        pass
+        try:
+            float(humidity_value)
+            self.humidity_value = humidity_value
+        except ValueError:
+            print('Wrong input')
 
     def set_air_pollution(self, air_pollution_level):
         """
@@ -50,7 +65,9 @@ class GittieHelper():
         Method should calculate if exiting home is safe for gittie
         """
 
-        if self.air_pollution_level < 10 and self.humidity_value > 0.5 and temperature_degree > 15:
-            return true
-        else:
-            return false
+        if self.temperature_degree > 15:
+            if self.humidity_value > 0.5:
+                if self.air_pollution_level < 10:
+                    return True
+        return False
+
