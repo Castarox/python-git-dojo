@@ -4,6 +4,7 @@ class GittieHelper():
         """
         Initialize attributes with default value
         """
+        adsf
         pass
 
     def set_temperature(self, temperature_degree):
