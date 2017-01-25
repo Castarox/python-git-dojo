@@ -9,6 +9,7 @@ def main():
         print('yey')
     else:
         print('nope')
+    house.is_hungry()
 
 
 if __name__ == '__main__':
