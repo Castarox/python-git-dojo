@@ -11,6 +11,7 @@ class GittieHelper():
         self.day_number = 10
         self.temperature_degree = 0
         self.humidity_value = 0
+        self.hungry_level = 0
 
 
     def set_temperature(self, temperature_degree):
@@ -81,4 +82,17 @@ class GittieHelper():
 
         return random.choice(guests)
 
+    def is_hungry(self):
+        if self.hungry_level > 50:
+            return True
+        return False
+
+    def set_hungry_level(self, hungry_level):
+        try:
+            int(hungry_level)
+            if 0 < hungry_level < 100:
+                raise ValueError
+            self.hungry_level = hungry_level
+        except ValueError:
+            print('Wrong input')
 
