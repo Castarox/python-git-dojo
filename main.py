@@ -10,6 +10,7 @@ def main():
     else:
         print('nope')
     print(house.what_weather())
+    print(house.have_guests())
 
 if __name__ == '__main__':
     main()
