@@ -1,6 +1,7 @@
 from gittie_helper import *
 
 def main():
+    '''test'''
     house = GittieHelper()
     house.set_temperature(20)
     house.set_humidity(0.80)
