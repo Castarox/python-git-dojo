@@ -56,7 +56,7 @@ class GittieHelper():
         except ValueError:
             print('ValueError')
 
-    def get_value(self):
+    def is_value(self):
         """
         Method should calculate if exiting home is safe for gittie
         """
