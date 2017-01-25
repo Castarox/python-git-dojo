@@ -77,8 +77,10 @@ class GittieHelper():
     def set_hungry_level(self, hungry_level):
         try:
             int(hungry_level)
-            if 0 < hungry_level < 100:
+            if hungry_level < 100:
                 raise ValueError
             self.hungry_level = hungry_level
         except ValueError:
             print('Wrong input')
+        except NotImplementedError:
+            

@@ -11,7 +11,12 @@ def main():
     else:
         print('nope')
     house.is_hungry()
+    try:
+        raise ValueError
+    except ValueError:
+        print('nope')
 
+    print('dalej w programie')
 
 if __name__ == '__main__':
     main()
