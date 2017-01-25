@@ -1,3 +1,5 @@
+import random
+
 class GittieHelper():
 
     def __init__(self):
@@ -67,4 +69,16 @@ class GittieHelper():
                 if self.air_pollution_level < 10:
                     return True
         return False
+
+    def what_weather(self):
+       weather = ['raining', 'snowing', 'nice weather']
+
+       return random.choice(weather)
+
+    def have_guests(self):
+
+        guests = ['yes', 'no']
+
+        return random.choice(guests)
+
 

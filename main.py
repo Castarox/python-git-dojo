@@ -9,7 +9,7 @@ def main():
         print('yey')
     else:
         print('nope')
-
+    print(house.what_weather())
 
 if __name__ == '__main__':
     main()
